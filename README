@@ -2,3 +2,6 @@ minis -- my own set of handy tools
 
 fdump.py - dump pub/priv frameworks + springboard from given sdk (mac os x, using simulator and native class-dump)
 	usage: fdump <sdk> <outdir>
+
+
+iosfw.py - show all available links from apple's iTunes server (ipsw)
