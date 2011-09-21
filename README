@@ -5,3 +5,6 @@ fdump.py - dump pub/priv frameworks + springboard from given sdk (mac os x, usin
 
 
 iosfw.py - show all available links from apple's iTunes server (ipsw)
+
+usbmux.py - usbmuxd socket interface thanks to marcan
+tcprelay.py - forward host ports to device ports through usbmux thanks to marcan
