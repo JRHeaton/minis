@@ -15,6 +15,8 @@ subprocess.call(["mkdir", "-p", outdir])
 
 sdk_root = "/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator" + sys.argv[1] + ".sdk"
 
+print "outdir = \"%s\"; sdk_root = \"%s\"" % (outdir, sdk_root)
+
 f_path = sdk_root + "/System/Library/Frameworks"
 pf_path = sdk_root + "/System/Library/PrivateFrameworks"
 
@@ -29,4 +31,4 @@ for file in os.listdir(pf_path):
     subprocess.call(["class-dump", "-H", pf_path + "/" + file + "/" + basename, "-o", outdir + basename], stderr=o_null, stdout=o_null)
 
 print "Dumping SpringBoard..."
-subprocess.call(["class-dump", "-H", sdk_root + "/System/Library/CoreServices/SpringBoard.app/SpringBoard", "-o", outdir + "SpringBoard"])
+subprocess.call(["class-dump", "-H", sdk_root + "/System/Library/CoreServices/SpringBoard.app/SpringBoard", "-o", outdir + "SpringBoard"], stderr=o_null, stdout=o_null)
